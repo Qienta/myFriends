@@ -1,0 +1,119 @@
+*
+{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    font-family: "Lucida Sans", sans-serif;
+}
+.error
+{
+    color: red;
+}
+
+body 
+{
+    display: grid;
+    justify-content: center;    
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+
+    grid-template-columns: .5fr 1.5fr .5fr;
+    grid-template-rows: .5fr 1.5fr .5fr;
+    grid-template-areas: 
+    "l_bar top_head r_bar"
+    "l_bar mid_con r_bar"
+    "l_bar bot_con r_bar";
+    grid-gap: 5px;
+}
+
+#last_bot
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#last_bot button
+{
+    margin: 20px;
+}
+
+
+.top_head
+{
+    grid-area: top_head;
+    display: block;
+}
+
+.mid_con
+{
+    grid-area: mid_con;
+    display: block;
+
+    align-items: center;
+    text-align: center;
+}
+
+.mid_con input[type=text],input[type=number]
+{
+    width: 20%;
+    padding: 3px 3px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+.mid_con button
+{
+    width: 20%;
+    border: none;
+    padding: 5px;
+    text-decoration: none;
+    margin: 10px;
+
+    cursor: pointer;
+}
+
+#next_chioces
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "c_bar a_bar";
+    grid-gap: 5px;
+}
+
+#choice_bar
+{
+    display: flex;
+    grid-area: c_bar;
+    
+    flex-direction: column;
+}
+
+#choice_bar button
+{
+    width: 50%;
+}
+
+.ans_bar
+{
+    grid-area: a_bar;
+}
+
+.bot_con
+{
+    grid-area: bot_con;
+    display: block;
+}
+
+
+.l_bar
+{
+    grid-area: l_bar;
+}
+
+.r_bar
+{
+    grid-area: r_bar;
+}
