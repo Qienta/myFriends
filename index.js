@@ -107,7 +107,7 @@ function calculateAge(para)
     {
         const totolAges = ages.reduce((a,b) => a+b, 0);
 
-        document.getElementById('resultsA').innerHTML += 
+        document.getElementById('resultsA').innerHTML = 
         `
         <p>Total Age : ${totolAges}</p>      
         `;
@@ -117,7 +117,7 @@ function calculateAge(para)
         const totolAges = ages.reduce((a,b) => a+b, 0);
         const averageAge = totolAges/ages.length;
 
-        document.getElementById('resultsB').innerHTML += 
+        document.getElementById('resultsB').innerHTML = 
         `        
         <p>Average Age : ${averageAge.toFixed(2)}</p>
         `;
@@ -126,7 +126,7 @@ function calculateAge(para)
     {
         const youngest = ages.indexOf(Math.min(...ages));
 
-        document.getElementById('resultsC').innerHTML += 
+        document.getElementById('resultsC').innerHTML = 
         `       
         <p>Youngest Friend(s) : ${ages[youngest]}</p>
         `;
@@ -146,7 +146,7 @@ function calculateAge(para)
     {
         const oldest = ages.indexOf(Math.max(...ages));
 
-        document.getElementById('resultsD').innerHTML += 
+        document.getElementById('resultsD').innerHTML = 
         `
         <p>Oldest Friend(s) : ${ages[oldest]}</p>        
         `;
@@ -155,7 +155,7 @@ function calculateAge(para)
         {
             if(data[x] == ages[oldest])
             {
-                document.getElementById('resultsC').innerHTML += 
+                document.getElementById('resultsD').innerHTML += 
                 `       
                 <p>${x}</p>
                 `;
@@ -170,6 +170,7 @@ function calculateAge(para)
 function resetForm()
 {
     document.getElementById('friendForm').reset();
+    document.getElementById('next_chioces').innerHTML = '';
 
     if(document.getElementById('resultsA') || document.getElementById('resultsB') || document.getElementById('resultsC') || document.getElementById('resultsD'))
     {
